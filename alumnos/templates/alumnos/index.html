@@ -1,0 +1,30 @@
+{% extends 'alumnos/base.html' %}
+{% block contenido %}
+{% load humanize %}
+{% load static %}
+
+<section id="dos">
+  <div class="row pt-5 pd-5 m-0">
+    {% for p in productos %}
+    <div class="col-md-3">
+      <div class="card mb-3">
+        {% if p.imagen %}
+        <img src="{{p.imagen.url}}" class="card-img-top" alt="...">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{p.titulo}}</h5>
+          <p class="card-text">{{p.tipo}} Precio: ${{p.precio | intcomma}}</p>
+          <hr>
+          <p class="card-text">Autor: {{p.autor}}</p>
+          <p class="card-text">Genero: {{p.genero}}</p>
+          <hr>
+          <button type="button" class="btn btn-primary text-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">...</button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>    
+
+{% endblock %}
+  

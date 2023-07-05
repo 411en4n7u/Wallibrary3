@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <!--|Style|-->
+    <link rel="stylesheet" href="{% static 'alumnos/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'alumnos/css/bootstrap.min.css' %}"/>
+    <!--|jquery|-->
+    <script src="{% static 'alumnos/js/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'alumnos/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'alumnos/js/funciones.js' %}"></script>
+    <script src="{% static 'alumnos/js/popper.min.js' %}"></script>
+    <!--|fin de librerias|-->
+</head>
+<body>
+    <!doctype html>
+<html lang="es">
+   
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+        <meta name="description" content="Contacto">
+        <meta name="author" content="Allen">
+        <title>Formulario de contacto</title>
+    </head>
+
+    <body>
+        <!-- Termina la definición del menú -->
+        <main role="main" class="container">
+            <div class="row">
+                <!-- Aquí pon las col-x necesarias, comienza tu contenido, etcétera -->
+                <div class="col-12">
+                    <h1>Gracias por contactarme</h1>
+                </div>
+                <div class="col-12">
+                    <form method="POST" action="contacto_correcto.html">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input name="nombre" required type="text" id="nombre"
+                                class="form-control" placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico</label>
+                            <input name="correo" required type="email" id="correo"
+                                class="form-control" placeholder="Tu correo electrónico">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea required placeholder="Escribe tu mensaje"
+                                class="form-control" name="mensaje" id="mensaje"
+                                cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn-success btn" onclick="validar_formulario()" type="submit">
+                                Enviar
+                            </button>
+                            <a href="index.html">Inicio</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+</body>
+</html>
+<script>
+
+validar_formulario = function(){
+
+        var nombre = $('#nombre').val();
+        var correo = $('#correo').val();
+        var mensaje = $('#mensaje').val();
+
+        if(nombre.trim()==''){
+            alert('Nombre no puede ser en blanco');
+        }
+        if(correo.trim()==''){
+            alert('Correo no puede ser en blanco');
+        }
+        if(mensaje.trim()==''){
+            alert('Mensaje no puede ser en blanco');
+        }else{
+            alert('Mensaje No puede ser en blanco');  
+        }
+
+}
+
+</script>

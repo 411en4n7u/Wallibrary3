@@ -1,0 +1,30 @@
+{% extends 'alumnos/base.html' %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
+
+{% block contenido %}
+
+    <section class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 cold-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        {{mensaje}}
+                        <form action="{% url 'agregar-producto' %}" method="post" vactype="multipart-from-data">
+
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            
+                            <input type="submit" value="Guardar" class="btm btn-primary">
+                            <input type="submit" value="cancelar" class="btm btn-secundary">
+                            
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

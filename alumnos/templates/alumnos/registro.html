@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Registro, initial-scale=1.0">
+    <title>Registro</title>
+    <!--|Style|-->
+    <link rel="stylesheet" href="{% static 'alumnos/css/style2.css' %}">
+    <link rel="stylesheet" href="{% static 'alumnos/css/bootstrap.min.css' %}"/>
+    <!--|jquery|-->
+    <script src="{% static 'alumnos/js/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'alumnos/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'alumnos/js/funciones.js' %}"></script>
+    <script src="{% static 'alumnos/js/popper.min.js' %}"></script>
+    <script src="{% static 'alumno/js/login.js' %}"></script>
+    <!--|fin de librerias|-->
+
+</head>
+<body id="fondo1" class="container-fluid">
+    
+    <div class="coluna1">
+        <div class="col-3 bg-danger">col</div>
+    </div>
+
+    <section id="cuadro">
+        <a href="index.html"></a><h2>Crea una cuenta</h2>
+        <form id="for" action="" method="dialog">
+                
+            <hr>
+            <label for="UsuarioN">NOMBRE USUARIO</label>
+            <input type="text" id="UsuarioN" name="Perfil" placeholder="Nombre Usuario"/>
+                
+            <hr>
+            <label for="Cor">EMAIL</label>
+            <input type="email" id="Cor" name="Email" placeholder="EJ: Juanito@gmail.com" />
+                
+            <hr>
+            <label for="NomC">NOMBRE COMPLETO</label>
+            <input type="text" id="NomC" name="Persona" placeholder="Nombre Completo"/>
+                
+            <hr>
+            <label for="UsuarioC">CONTRASEÑA</label>
+            <input type="password" id="UsuarioC" name="contraseña" placeholder="contraseña"/>
+                
+            <hr>
+            <input type="button" value="Enviar" id="botom" onclick="validar_registro()" />
+        </form>
+        <div id="error"></div>
+    </section>
+
+    <div class="coluna1">
+        <div class="col-12 bg-danger">col</div>
+    </div>
+
+<footer id="bajos">
+    <div class="alert alert-primary" role="alert">
+        llegaste tan lejos
+        <a href="https://youtu.be/dQw4w9WgXcQ"> GALLETAS GRATIS</a> 
+        <a href="contacto.html">Contacto</a>
+    </div>
+</footer>
+</body>
+</html>

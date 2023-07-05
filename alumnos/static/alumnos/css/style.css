@@ -1,0 +1,72 @@
+#fondo{
+    background-color: coral;
+}
+
+#titulo {
+    /*--background-color: rgba(0,0,0,0);*/
+    color: aliceblue;
+    height: 100px;
+    background-image: url('../img/estante-libros.png');
+    background-size: cover;
+    /*|se ingreso con png y jpg pero no hay exito preguntar en un futuro|*/
+}
+
+#menu{
+    background-color: black;
+    
+    color: aliceblue;
+}
+
+#contexto{
+    background-color: chocolate;
+
+    color:aliceblue;
+}
+
+.subtitulo{
+    background-color: chocolate;
+    
+    color: black;
+}
+
+.carousel2{
+    color:black;
+}
+
+#bajos{
+    background-color: black;
+    color: aliceblue;
+}
+
+ 
+#carouselExampleIndicators .carousel-item{
+    object-fit: cover;
+    object-position: center;
+    height: 500px;
+}
+
+@media (max-width: 600px){
+    #carouselExampleIndicators .carousel-caption{
+        height: 7rem;
+    }
+
+}
+.letras_carrusel{
+    -webkit-text-stroke: 1px black;
+}
+
+img{
+    height: 500px;
+}
+
+.precio{
+    -webkit-text-stroke: 1px black;
+}
+
+/*.descrip{
+
+}
+
+#api{
+    
+}*/

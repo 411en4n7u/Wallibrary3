@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ingresar</title>
+    <!--|Style|-->
+    <link rel="stylesheet" href="{% static 'alumnos/css/style2.css' %}">
+    <link rel="stylesheet" href="{% static 'alumnos/css/bootstrap.min.css' %}"/>
+    <!--|jquery|-->
+    <script src="{% static 'alumnos/js/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'alumnos/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'alumnos/js/funciones.js' %}"></script>
+    <script src="{% static 'alumnos/js/popper.min.js' %}"></script>
+    <script src="{% static 'alumno/js/login.js' %}"></script>
+    <!--|fin de librerias|-->
+</head>
+<body id="fondo1">
+
+    <div>
+
+    </div>
+
+    <a class="btn btn-primary" href="index.html" role="button">Inicio</a>
+    
+    <div id="cuadro">
+        <h2>¡Inicia Sesión!</h2>
+        <form id="for" action="" method="dialog"> <!--|¿action="/formulario"?|-->
+
+            <hr>
+            <label for="UsuarioN">Nombre: </label> 
+            <input type="text" id='UsuarioN' name="Perfil" placeholder="Nombre" />
+            
+            <hr>
+            <label for="UsuarioC">Contraseña: </label>
+            <input type="password" id='UsuarioC' name="contraseña" placeholder="contraseña"/>
+            
+            <hr>
+            <input type="submit" value="Enviar" id="botom" />
+            
+            <br>
+            <a href="registro.html"> ¿No tienes cuenta?</a>
+        </form>
+        <div id="Error"></div>
+    </div>
+
+</body>
+</html>
