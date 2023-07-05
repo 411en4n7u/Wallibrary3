@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-body">
                         {{mensaje}}
-                        <form action="{% url 'agregar-producto' %}" method="post" vactype="multipart-from-data">
+                        <form action="" method="post" enctype="multipart/form-data">
 
                             {% csrf_token %}
                             {{ form | crispy }}
@@ -28,3 +28,5 @@
     </section>
 
 {% endblock %}
+
+<!--|{% url 'agregar-producto' %}|-->

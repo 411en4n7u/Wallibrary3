@@ -1,0 +1,38 @@
+{% extends 'alumnos/base.html' %}
+{% load humanize %}
+{% block contenido %}
+
+    <section class="container">
+        <div class="table-hover table-responsive mt-5">
+            <table class="table table-striped">
+                <tr>
+                    <th>Titulo</th>
+                    <th>Tipo</th>
+                    <th>Genero</th>
+                    <th>Precio</th>
+                    <th>Autor</th>
+                    <th>Editorial</th>
+                    <th>Imagen</th>
+                    <th></th>
+                    <th>Opciones</th>
+                </tr>
+                {% for p in productos %}
+                <tr>
+                    <td>{{p.titulo}}</td>
+                    <td>{{p.tipo}}</td>
+                    <td>{{p.genero}}</td>
+                    <td>{{p.precio | intcomma}}</td>
+                    <td>{{p.autor}}</td>
+                    <td>{{p.editorial}}</td>
+                    {% if p.imagen %}
+                    <td><img src="{{p.imagen.url}}" alt="imagen-producto" class="w-25 h-50"></td>
+                    {% endif %}
+                    <td> <a href="{% url 'modificar-producto' p.id %}" class="btn btn-warning">Modificar</a> </td>
+                    <td> <a href="{% url 'eliminar-producto' p.id %}" class="btn btn-danger">Eliminar</a> </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+
+{% endblock %}
